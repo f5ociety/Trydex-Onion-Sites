@@ -1,3 +1,7 @@
+body {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 .main__sites {
     display: flex;
     flex-direction: column;
@@ -5,24 +9,28 @@
 
 a {
     display: inline-block;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
     font-weight: 700;
     line-height: 1;
-    text-align: center;
     white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: 0.25rem;
+    border-radius: 5px;
     background-color: #85559f;
-    color: rgb(255, 253, 253);
-    background-color: #85559f;
-    padding: 0.5rem !important;
-    text-decoration: none;
+    color: #fffdfd;
+    padding: 0.5em;
+    transition: 0.2s;
+    transition-property: background-color, box-shadow, transform;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 a:hover {
     /* transform: scale(1.5); */
+    color: #fffdfd;
     background-color: #644275;
+    box-shadow: 0px 0px 6px 4px rgba(0, 0, 0, 0.2);
+}
+
+a:active {
+    transform: scale(0.9);
 }
 
 img {
@@ -36,7 +44,61 @@ li {
     margin-left: 40px;
 }
 
-details, summary {
+details,
+summary,
+a {
     font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+details {
+    display: block;
+    margin-bottom: 8px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::-moz-list-bullet {
+    list-style-type: none;
+}
+
+summary::marker {
+    display: none;
+}
+
+summary {
+    padding: 0.5rem;
+    display: inline-block;
+    font-size: 1.4em;
+    cursor: pointer;
+    margin-bottom: 8px;
+    /*user-select: none;*/
+    transition: 0.2s;
+    transition-property: background-color, box-shadow;
+}
+
+summary:before {
+    content: "+";
+    margin-right: 0.3em;
+}
+
+summary:hover {
+    background-color: #ededed;
+}
+
+details[open] > summary:before {
+    content: "–";
+}
+
+details[open] > summary {
+    background-color: #d6d6d6;
+}
+
+summary ~ * {
+    padding: 0 1em 0 1em;
+}
+
+summary:focus {
+    outline: 0;
 }
