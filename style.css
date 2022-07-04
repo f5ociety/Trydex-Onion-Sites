@@ -1,0 +1,31 @@
+.main__sites {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    border-color: #85559f;
+    color: rgb(255, 253, 253);
+    background-color: #85559f;
+    padding: 0.5rem !important;
+    text-decoration: none;
+}
+
+img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+li {
+    margin-top: 20px;
+}
+
