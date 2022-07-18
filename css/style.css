@@ -19,7 +19,7 @@ a {
     padding: 0.5em;
     transition: 0.2s;
     transition-property: background-color, box-shadow, transform;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -36,17 +36,13 @@ a:active {
 
 img {
     height: 20px;
-    margin-right: 10px;
 }
 
 ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
     justify-content: center;
-    max-width: 1024px;
-    margin: 0 auto;
 }
 
 li {
@@ -58,6 +54,14 @@ li {
     /*max-width: 500px;*/
     flex-basis: 30%;
     flex-grow: 1;
+}
+
+li:hover {
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.2);
+    background-color: #ededed;
+}
+
+.paper {
     padding: 15px;
     background-color: #f7f7f7;
     border-radius: 10px;
@@ -66,9 +70,8 @@ li {
     transition-property: background-color, box-shadow, transform;
 }
 
-li:hover {
-    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.2);
-    background-color: #ededed;
+.w100 {
+    width: 100%;
 }
 
 details,
@@ -131,4 +134,43 @@ summary ~ * {
 
 summary:focus {
     outline: 0;
+}
+
+hr {
+    height: 3px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    margin: 5px;
+}
+
+.extension {
+    padding: 20px;
+}
+
+.extension .paper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 180%;
+    margin: 1em;
+    text-align: center;
+}
+
+p {
+    margin: 1em 0;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.button-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }
